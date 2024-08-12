@@ -1,8 +1,17 @@
 require('dotenv').config();
 
+//Mongo(ose) 1
+const mongoose = require('mongoose');
+console.log('MongoDB URI:', process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
+mongoose.connect(
+  process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }
+)
+
+// Define the Person model (as a placeholder, since it hasn't been defined yet)
 let Person;
 
+// Define the functions (placeholders as given in your code)
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
@@ -25,13 +34,11 @@ const findPersonById = (personId, done) => {
 
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
-
   done(null /*, data*/);
 };
 
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
-
   done(null /*, data*/);
 };
 
@@ -41,13 +48,11 @@ const removeById = (personId, done) => {
 
 const removeManyPeople = (done) => {
   const nameToRemove = "Mary";
-
   done(null /*, data*/);
 };
 
 const queryChain = (done) => {
   const foodToSearch = "burrito";
-
   done(null /*, data*/);
 };
 
